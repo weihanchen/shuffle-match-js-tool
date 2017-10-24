@@ -8,6 +8,7 @@ import { matchHelper }  from './lib';
 // import 'bootstrap-v4-dev/dist/js/bootstrap.min.js';
 
 /* declare */
+const clearBtn = document.getElementById('clear-btn');
 const editArea = document.getElementById('edit-area');
 const matchBtn = document.getElementById('match-btn');
 const numGenBtn = document.getElementById('num-gen-btn');
@@ -15,6 +16,11 @@ const previewArea = document.getElementById('preview-area');
 // const uploadBtn = document.getElementById('upload-btn');
 
 /* methods */
+const clearInput = (event) => {
+  event.preventDefault();
+  editArea.value = "";
+}
+
 const match = (event) => {
   event.preventDefault();
   const arr = editArea.value.split(/,|\n/g).filter(el => el && el.length > 0);
@@ -38,6 +44,7 @@ const numGen = () => {
 const output = (arr) => previewArea.value = arr.reduce((result, el) => `${result}${el.name} -> ${el.match}\n`, '');
 
 /* binding */
+clearBtn.addEventListener('click', clearInput);
 matchBtn.addEventListener('click', match);
 numGenBtn.addEventListener('click', numGen);
 // input.addEventListener('keypress', (event) => {
