@@ -8,7 +8,6 @@ Support offline with pwa cache.
 
 Nodejs ^8.4.0
 
-## [Demo](https://weihanchen.github.io/binary-search-tree-js-visualize/)
 
 ## Stacks
 * [ECMAScript6](http://es6-features.org/)
