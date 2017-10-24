@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title></title>
+</head>
+
+<body class="container-fluid bg-white">
+   <h1 class="title text-center">隨機匹配工具</h1>
+   <div class="row">
+      <div class="col-md-12">
+            <button id="num-gen-btn" class="btn">隨機產生編號</button>
+            <!-- <button id="upload-btn" class="btn">上傳文字檔</button> -->
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-md-5">
+         <div class="alert text-center" role="alert">
+            請輸入名單
+         </div>
+         <div class="inputs">
+            <div class="form-group">
+               <textarea class="form-control" id="edit-area" rows="30">A&#13;&#10;B&#13;&#10;C&#13;&#10;D</textarea>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-2 text-center">
+         <button id="match-btn" class="btn btn-primary btn-raised center">
+            <span class="glyphicon glyphicon-plus"></span> Match</button>
+      </div>
+      <div class="col-md-5">
+         <div class="alert text-center"  role="alert">
+               匹配結果
+         </div>
+         <div class="inputs">
+            <div class="form-group">
+               <textarea class="form-control" id="preview-area"  disabled rows="30"></textarea>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
