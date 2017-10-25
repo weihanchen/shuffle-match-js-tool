@@ -9,19 +9,12 @@ const shuffleArray = arr => {
   return arr;
 };
 
-const matchElements = (arr, self = 'name', other = 'pair') => arr.reduce((result, el, idx) => [...result, ...[{
-  [self]: el,
-  [other]: (idx + 1) >= arr.length ? arr[0] : arr[idx + 1]
-}]], []);
+const matchMap = (arr) => arr.reduce((result, el, idx) => Object.assign({}, result, {
+  [el]: (idx + 1) >= arr.length ? arr[0] : arr[idx + 1]
+}), {});
 
-const sortArrObjBy = (arr, key) => arr.sort((a, b) => {
-  const [aVal, bVal] = [a[key], b[key]];
-  if (aVal < bVal) return -1;
-  if (aVal > bVal) return 1;
-  return 0;
-});
 
-export default { shuffleArray, matchElements, sortArrObjBy };
+export default { shuffleArray, matchMap };
 
 //testing
 // const arr = shuffleArray(['1A', '2B', '3C', '4D']);

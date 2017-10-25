@@ -23,15 +23,15 @@ const uploadFile = document.getElementById('upload-file');
 const clearInput = (event) => {
   event.preventDefault();
   editArea.value = "";
-}
+};
 
 const match = (event) => {
   event.preventDefault();
-  const arr = editArea.value.split(/,|\n/g).filter(el => el && el.length > 0);
+  const names = editArea.value.split(/,|\n/g);
+  const arr = names.filter((el, index) => el && el.length > 0 && names.indexOf(el) === index);
   const shuffledArr = matchHelper.shuffleArray(arr);
-  const matched = matchHelper.matchElements(shuffledArr, 'name', 'match');
-  const sortedArr = matchHelper.sortArrObjBy(matched, 'name');
-  output(sortedArr);
+  const map = matchHelper.matchMap(shuffledArr);
+  output(arr, map);
 };
 
 const numGen = () => {
@@ -50,7 +50,7 @@ const openFileDialog = (event) => {
   uploadFile.click();
 };
 
-const output = (arr) => previewArea.value = arr.reduce((result, el) => `${result}${el.name} -> ${el.match}\n`, '');
+const output = (arr, map) => previewArea.value = arr.reduce((result, el) => `${result}${el} -> ${map[el] || ''}\n`,'');
 
 const loadFile = () => {
   if (!window.FileReader) {
