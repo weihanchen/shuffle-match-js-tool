@@ -65,7 +65,7 @@ const loadFile = () => {
     // Read the file
     reader.readAsText(textFile);
     // When it's loaded, process it
-    uploadBtn.onload = (e) => {
+    reader.onload = (e) => {
       const file = e.target.result;
       if (file && file.length) {
         editArea.value = file;
@@ -73,7 +73,7 @@ const loadFile = () => {
     };
     
   } else {
-    alert('Please upload a file before continuing')
+    alert('Please upload a file before continuing');
   }
 };
 
