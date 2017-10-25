@@ -21,7 +21,7 @@ parserOptions:
 rules:
   linebreak-style:
   - error
-  - unix
+  - windows
   semi:
   - error
   - always

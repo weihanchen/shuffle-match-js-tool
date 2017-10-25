@@ -28,7 +28,7 @@ const clearInput = (event) => {
 const match = (event) => {
   event.preventDefault();
   const names = editArea.value.split(/,|\n/g);
-  const arr = names.filter((el, index) => el && el.length > 0 && names.indexOf(el) === index);
+  const arr = names.filter((el, index) => el && el.trim().length > 0 && names.indexOf(el) === index);
   const shuffledArr = matchHelper.shuffleArray(arr);
   const map = matchHelper.matchMap(shuffledArr);
   output(arr, map);
@@ -82,7 +82,7 @@ clearBtn.addEventListener('click', clearInput);
 matchBtn.addEventListener('click', match);
 numGenBtn.addEventListener('click', numGen);
 uploadBtn.addEventListener('click', openFileDialog);
-uploadFile.addEventListener('click', loadFile);
+uploadFile.addEventListener('change', loadFile, false);
 // input.addEventListener('keypress', (event) => {
 //    if (event.keyCode === 13) insert(event)
 // });
