@@ -9,6 +9,8 @@ globals:
   describe: true
   it: true
   process: true
+  test: true
+  expect: true
   __base: true
   __dirname: true
   __filename: true
