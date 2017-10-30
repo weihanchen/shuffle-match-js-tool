@@ -14,6 +14,7 @@ Nodejs ^8.4.0
 * [Webpack](https://webpack.github.io/)
 * [Material Design for Bootstrap](http://fezvrasta.github.io/bootstrap-material-design/)
 * [Sass](http://sass-lang.com/)
+* [Jest](https://facebook.github.io/jest/)
 * [Precache](https://github.com/goldhand/sw-precache-webpack-plugin)
 * [CI with travis and github's gh-pages](https://gist.github.com/domenic/ec8b0fc8ab45f39403dd)
 
@@ -29,5 +30,7 @@ npm run release
 npm run lint
 # fix lint warning
 npm run lint:fix
+# test
+npm run test
 ```
 
