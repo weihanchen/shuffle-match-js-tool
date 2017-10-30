@@ -46,7 +46,7 @@
     "scripts": {
         "lint": "eslint src",
         "lint:fix": "eslint --fix src",
-        "release": "webpack",
+        "release": "npm run lint && npm run test && webpack",
         "dev": "webpack-dev-server --port 8003 --inline --devtool eval --progress --colors --hot --content-base build",
         "server": "node server.js",
         "test": "jest"
