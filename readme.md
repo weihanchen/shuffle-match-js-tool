@@ -1,6 +1,8 @@
 shuffle-match-js-tool
 ===
 
+[![Build Status](https://travis-ci.org/weihanchen/shuffle-match-js-tool.svg?branch=master)](https://travis-ci.org/weihanchen/shuffle-match-js-tool)
+
 Data structure of shuffle algorithm then match each elemant pair.
 Support offline with pwa cache.
 
